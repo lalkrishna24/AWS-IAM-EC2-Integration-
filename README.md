@@ -92,7 +92,7 @@ Unable to locate credentials. You can configure credentials by running "aws logi
 
 **Screenshot — EC2 Without Role (Credential Error):**
 
-![EC2 without role - credential error](screenshots/ec2_without_role_error.jpeg)
+![EC2 without role - credential error](https://raw.githubusercontent.com/lalkrishna24/AWS-IAM-EC2-Integration-/01dc0afede99e8ed2af8fd356af9cad0d19e9c62/1771071843952.jpeg)
 
 ---
 
@@ -114,7 +114,7 @@ Attached an IAM Role (`S3ReadAccess`) directly to the EC2 instance. No credentia
 
 **Screenshot — EC2 With IAM Role (Successful S3 List):**
 
-![EC2 with IAM role - S3 access](screenshots/ec2_with_role_s3_access.jpeg)
+![EC2 with IAM role - S3 access](https://raw.githubusercontent.com/lalkrishna24/AWS-IAM-EC2-Integration-/01dc0afede99e8ed2af8fd356af9cad0d19e9c62/1771071843524.jpeg)
 
 ---
 
@@ -145,7 +145,7 @@ Default output format [None]: json
 
 **Screenshot — EC2 Without Role, Configured via AWS CLI:**
 
-![EC2 aws configure credentials](screenshots/ec2_aws_configure_s3_access.jpeg)
+![EC2 aws configure credentials](https://raw.githubusercontent.com/lalkrishna24/AWS-IAM-EC2-Integration-/01dc0afede99e8ed2af8fd356af9cad0d19e9c62/1771071845400.jpeg)
 
 ---
 
@@ -157,7 +157,7 @@ Logged into the AWS Console with an IAM User that lacked `s3:ListAllMyBuckets`. 
 
 **Screenshot — S3 Console Permission Denied:**
 
-![S3 console no permission](screenshots/s3_console_no_permission.jpeg)
+![S3 console no permission](https://raw.githubusercontent.com/lalkrishna24/AWS-IAM-EC2-Integration-/01dc0afede99e8ed2af8fd356af9cad0d19e9c62/1771071845554.jpeg)
 
 > **Fix:** Attach the correct IAM policy to the user/role granting `s3:ListAllMyBuckets`.
 
@@ -203,10 +203,10 @@ aws-iam-ec2-s3-integration/
 │   └── aws-cli-commands.sh                # CLI commands used
 │
 └── screenshots/
-    ├── ec2_without_role_error.jpeg
-    ├── ec2_with_role_s3_access.jpeg
-    ├── ec2_aws_configure_s3_access.jpeg
-    └── s3_console_no_permission.jpeg
+    ├── 1771071843952.jpeg        # EC2 without role - credential error
+    ├── 1771071843524.jpeg        # EC2 with IAM role - S3 access
+    ├── 1771071845400.jpeg        # EC2 aws configure S3 access
+    └── 1771071845554.jpeg        # S3 console permission denied
 ```
 
 ---
@@ -260,7 +260,7 @@ aws s3 sync ./myfolder s3://my-bucket-name/myfolder/
 ┌─────────────────────────────────────────────────────────┐
 │                     AWS Account                         │
 │                                                         │
-│  ┌──────────┐    assumes    ┌─────────────────────┐     │
+│  ┌──────────┐    assumes    ┌─────────────────────┐    │
 │  │  EC2     │─────role─────▶│  IAM Role           │    │
 │  │ Instance │               │  (S3ReadAccess)     │    │
 │  └──────────┘               └────────┬────────────┘    │
